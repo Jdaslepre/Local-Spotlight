@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Local-Spotlight (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Local-Spotlight (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+﻿<Ex:WindowEx x:Class="Local_Spotlight.MainWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:Local_Spotlight"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:Ex="using:WinUIEx"
+             mc:Ignorable="d"
+             IsMinimizable="False"
+             IsMaximizable="False"
+             IsResizable="False"
+             IsAlwaysOnTop="True"
+             Width="620"
+             Height="510">
+
+    <Grid Background="{ThemeResource MainBackground}">
+
+        <InfoBar x:Name="info"
+                 IsOpen="False"
+                 Margin="12,44,12,12" />
+
+        <Grid Height="80"
+              VerticalAlignment="Bottom"
+              Padding="24"
+              ColumnSpacing="8"
+              Background="{ThemeResource CommandSpaceBackground}"
+              BorderBrush="{ThemeResource Separator}"
+              BorderThickness="0,1,0,0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0"
+                    HorizontalAlignment="Stretch"
+                    Height="32"
+                    Content="Open file location"
+                    Click="FileLocation_Click"/>
+
+            <Button Grid.Column="1"
+                    HorizontalAlignment="Stretch"
+                    Height="32"
+                    Content="Convert spotlight files"
+                    Style="{StaticResource AccentButtonStyle}"
+                    Click="Conv_Click" />
+
+        </Grid>
+
+    </Grid>
+</Ex:WindowEx>
